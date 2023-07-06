@@ -35,6 +35,15 @@ function dividir() {
     document.f1.c.value = r;
 
 }
+function hipotenusa() {
+
+    var a = document.f1.a.value;
+    var b = document.f1.b.value;
+    var r = document.f1.c.value;
+    r = parseFloat(a*a) + parseFloat(b*b);
+    r = Math.sqrt(r)
+    document.f1.c.value = r;
+}
 function calcular() {
 
     var operacao = document.f1.operacao.value;
@@ -54,6 +63,10 @@ function calcular() {
 
         case "dividir":
             dividir();
+            break;
+
+        case "hipotenusa":
+            hipotenusa();
             break;
 
         default:
